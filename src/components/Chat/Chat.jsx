@@ -5,7 +5,7 @@ import React from 'react';
 import './chat.css';
 import { getCookie } from 'cookies-next';
 
-export default function Chat({ idChamado, possuiTecnico }) {
+export default function Chat({ idChamado, possuiTecnico, isConcluido }) {
   const [mensagens, setMensagens] = useState([]);
   const [carregandoMensagens, setCarregandoMensagens] = useState(true);
   const [novoApontamento, setNovoApontamento] = useState('');
@@ -138,7 +138,7 @@ export default function Chat({ idChamado, possuiTecnico }) {
         </div>
       </div>
       <div className="d-flex bottom-0">
-        {possuiTecnico === true ? (
+        {possuiTecnico === true || isConcluido === false ? (
           <>
             <input
               type="text"
