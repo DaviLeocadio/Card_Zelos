@@ -111,3 +111,19 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.btn-ficha-virgem-ativado{
+  border-bottom:solid 2px #e30615;
+  border-radius: 5px;
+}
+
+.btn-chat-virgem-ativado{
+  border-bottom:solid 2px #e30615;
+    border-radius: 5px;
+}
+
+.modal-body{
+  max-height: 400px;
+  overflow-y: auto;
+  height: 25rem;
+}

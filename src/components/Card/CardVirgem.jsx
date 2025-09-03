@@ -1,14 +1,19 @@
 "use client";
 import "./CardVirgem.css";
 import React, { useEffect, useState } from "react";
-
+import Chat from "../Chat/Chat";
 
 export default function Carrosel({ chamados = [] }) {
   const [funcao, setFuncao] = useState("");
   const [chamadosArray, setChamadosArray] = useState([]);
+  const [page, setPage] = useState(1);
 
-
-
+  function page1() {
+    setPage(1);
+  }
+  function page2() {
+    setPage(2);
+  }
 
   async function atribuirTecnico(idChamado) {
     const cookieJWT = getCookie("token");
@@ -52,7 +57,8 @@ export default function Carrosel({ chamados = [] }) {
 
   return (
     <>
-      <div className={`card mt-2 row card-virgem borderColorPrioridade-1-virgem`}>
+
+      <div className={`card mt-2 row card-virgem borderColorPrioridade-1-virgem`} type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div className="col-md-2 ms-2 align-items-center d-flex justify-content-start">
           <img src="/doom.jpg" className="img-fluid imgPerfil-virgem" />
         </div>
@@ -82,7 +88,74 @@ export default function Carrosel({ chamados = [] }) {
         <div className="col-md-1 more-virgem align-items-center justify-content-center d-flex">
           <i className="bi bi-plus fs-1"></i>
         </div>
+      </div>
 
+
+      {/* Modal */}
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabIndex={-1}
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            {/* Modal Header */}
+            <div className="modal-header gap-4">
+              {page === 1 ? (
+                <>
+                  <button onClick={page1} className="btn-ficha-virgem-ativado">
+                    <h1 className="modal-title fs-5" >
+                      Ficha Técnica
+                    </h1>
+                  </button>
+
+                  <button onClick={page2}>
+                    <h1 className="modal-title fs-5">Chat</h1>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button onClick={page1}>
+                    <h1 className="modal-title fs-5" id="exampleModalLabel">
+                      Ficha Técnica
+                    </h1>
+                  </button>
+
+                  <button onClick={page2} className="btn-chat-virgem-ativado">
+                    <h1 className="modal-title fs-5">Chat</h1>
+                  </button>
+                </>
+              )}
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            {/* Fim Modal Header */}
+
+            {page === 1 ? (
+              <div className="modal-body">
+                <p><b>Título: </b> oiii asdgas shadgahjs shdgkAJ</p>
+                <p><b>Título: </b> oiii asdgas shadgahjs shdgkAJ</p>
+                <p><b>Título: </b> oiii asdgas shadgahjs shdgkAJ</p>
+                <p><b>Título: </b> oiii asdgas shadgahjs shdgkAJ</p>
+                <p><b>Título: </b> oiii asdgas shadgahjs shdgkAJ</p>
+                <p><b>Título: </b> oiii asdgas shadgahjs shdgkAJ</p>
+                <p><b>Título: </b> oiii asdgas shadgahjs shdgkAJ</p>
+                <p><b>Título: </b> oiii asdgas shadgahjs shdgkAJ</p>
+                <p><b>Título: </b> oiii asdgas shadgahjs shdgkAJ</p>
+              </div>
+            ) : (
+              <div className="modal-body">
+                <Chat possuiTecnico={false} />
+              </div>
+            )}
+          </div>
+        </div>
       </div>
 
     </>

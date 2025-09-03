@@ -6,8 +6,7 @@ export default function Home() {
     <>
       <div className="">
         <CardVirgem />
-        <CardVirgem />
-        <CardVirgem />
+       
       </div>
 
     </>
