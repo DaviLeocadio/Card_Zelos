@@ -13,7 +13,7 @@
   --normal-font-size: 0.938rem;
 }
 
-.card-virgem {
+.card-tecnico {
   border-radius: 10px;
   margin-right: 1rem;
   margin-left: 1rem;
@@ -24,25 +24,25 @@
 
 }
 
-.imgPerfil-virgem {
+.imgPerfil-tecnico {
   border-radius: 100%;
   height: 4.8rem;
   width: 4.8rem;
 }
 
-.borderColorPrioridade-1-virgem {
+.borderColorPrioridade-1-tecnico {
   border-left: solid var(--prioridade-maxima) 15px;
 }
 
-.borderColorPrioridade-2-virgem {
+.borderColorPrioridade-2-tecnico {
   border-left: solid var(--prioridade-minima) 15px;
 }
 
-.borderColorPrioridade-3-virgem {
+.borderColorPrioridade-3-tecnico {
   border-left: solid var(--prioridade-baixa) 15px;
 }
 
-.borderColorPrioridade-4-virgem {
+.borderColorPrioridade-4-tecnico {
   border-left: solid var(--prioridade-maxima) 15px;
 }
 
@@ -62,35 +62,35 @@
   color: var(--prioridade-maxima);
 }
 
-.prioridade-virgem-1 {
+.prioridade-tecnico-1 {
   background-color: #dbc9ca;
   border-radius: 20px;
   padding: 10px;
 }
 
-.prioridade-virgem-1 p {
+.prioridade-tecnico-1 p {
   font-size: 13px;
 }
 
-.prioridade-virgem-2 {
+.prioridade-tecnico-2 {
   background-color: #dce5ae;
   border-radius: 20px;
   padding: 10px;
 }
 
-.prioridade-virgem-3 {
+.prioridade-tecnico-3 {
   background-color: #b1c7ba;
   border-radius: 20px;
   padding: 10px;
 }
 
-.prioridade-virgem-4 {
+.prioridade-tecnico-4 {
   background-color: #c0868a;
   border-radius: 20px;
   padding: 10px;
 }
 
-.titulo-virgem h2 {
+.titulo-tecnico h2 {
   font-size: 16px;
   width: 11rem;
   white-space: nowrap;
@@ -98,28 +98,28 @@
   text-overflow: ellipsis;
 }
 
-.titulo-virgem p {
+.titulo-tecnico p {
   font-size: 14px;
 }
 
-.user-virgem div h6 {
+.tecnico-tecnico div h6 {
   font-size: 13px;
   font-weight: 700;
 }
 
-.user-virgem p {
+.tecnico-tecnico p {
   font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.btn-ficha-virgem-ativado {
+.btn-ficha-tecnico-ativado {
   border-bottom: solid 2px #e30615;
 
 }
 
-.btn-chat-virgem-ativado {
+.btn-chat-tecnico-ativado {
   border-bottom: solid 2px #e30615;
 
 }
@@ -130,81 +130,81 @@
   height: 25rem;
 }
 
-.info-ficha-virgem>p {
+.info-ficha-tecnico>p {
   width: 40%;
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-  .card-virgem {
+  .card-tecnico {
     padding: 0.3rem;
     min-height: 5rem;
   }
 
-  .imgPerfil-virgem {
+  .imgPerfil-tecnico {
     height: 3.5rem;
     width: 3.5rem;
   }
 
-  .titulo-virgem h2 {
+  .titulo-tecnico h2 {
     font-size: 14px;
     width: 8rem;
   }
 
-  .titulo-virgem p {
+  .titulo-tecnico p {
     font-size: 12px;
   }
 
-  .prioridade-virgem-1,
-  .prioridade-virgem-2,
-  .prioridade-virgem-3,
-  .prioridade-virgem-4 {
+  .prioridade-tecnico-1,
+  .prioridade-tecnico-2,
+  .prioridade-tecnico-3,
+  .prioridade-tecnico-4 {
     padding: 6px 8px;
   }
 
-  .prioridade-virgem-1 p,
-  .prioridade-virgem-2 p,
-  .prioridade-virgem-3 p,
-  .prioridade-virgem-4 p {
+  .prioridade-tecnico-1 p,
+  .prioridade-tecnico-2 p,
+  .prioridade-tecnico-3 p,
+  .prioridade-tecnico-4 p {
     font-size: 11px;
   }
 
-  .user-virgem div h6 {
+  .tecnico-tecnico div h6 {
     font-size: 12px;
   }
 
-  .user-virgem p {
+  .tecnico-tecnico p {
     font-size: 12px;
   }
 
-  .more-virgem i {
+  .more-tecnico i {
     font-size: 1.4rem;
   }
 
   
-   .info-ficha-virgem{
+   .info-ficha-tecnico{
     gap: 0 !important;
    }
 
-   .modal-body .infos-ficha-virgem{
+   .modal-body .infos-ficha-tecnico{
     gap: 0 !important;
    }
 
- .info-ficha-virgem>p {
+ .info-ficha-tecnico>p {
     width: 100%;
   }
 }
 
 @media (max-width: 575px) {
 
-   .info-ficha-virgem{
+   .info-ficha-tecnico{
     gap: 0 !important;
    }
 
-   .modal-body .infos-ficha-virgem{
+   .modal-body .infos-ficha-tecnico{
     gap: 0 !important;
    }
 
- .info-ficha-virgem>p {
+ .info-ficha-tecnico>p {
     width: 100%;
   }
 }

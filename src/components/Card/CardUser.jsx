@@ -1,5 +1,5 @@
 "use client";
-import "./CardVirgem.css";
+import "./CardUser.css";
 import React, { useEffect, useState } from "react";
 import Chat from "../Chat/Chat";
 import BtnPegarChamado from "../BtnPegarChamado/BtnPegarChamado";
@@ -58,36 +58,36 @@ export default function Carrosel({ chamados = [] }) {
 
   return (
     <>
-      <div className="card mt-2 row card-virgem borderColorPrioridade-1-virgem"
+      <div className="card mt-2 row card-user borderColorPrioridade-1-user"
         type="button"
         data-bs-toggle="modal"
-        data-bs-target="#exampleModal">
+        data-bs-target="#exampleModal1">
 
         <div className="col-12 col-sm-2 col-md-2 ms-md-2 align-items-center d-flex justify-content-center justify-content-sm-start">
-          <img src="/doom.jpg" className="img-fluid imgPerfil-virgem" />
+          <img src="/doom.jpg" className="img-fluid imgPerfil-user" />
         </div>
 
         <div className="col-12 col-sm-3 col-md-3 align-items-center justify-content-center justify-content-sm-start d-grid mt-2 mt-sm-0">
-          <div className="titulo-virgem justify-content-start align-items-center d-grid text-center text-sm-start">
+          <div className="titulo-user justify-content-start align-items-center d-grid text-center text-sm-start">
             <h2>oiii asdgas shadgahjs shdgkAJ</h2>
             <p className="m-0">Iniciado no dia 29/10/2025</p>
           </div>
         </div>
 
         <div className="col-12 col-sm-3 col-md-3 align-items-center justify-content-center d-flex mt-2 mt-sm-0">
-          <div className="prioridade-virgem-1 align-items-center justify-content-center d-flex">
+          <div className="prioridade-user-1 align-items-center justify-content-center d-flex">
             <p className="m-0 prioridadeP-1">Em Andamento</p>
           </div>
         </div>
 
-        <div className="user-virgem col-12 col-sm-2 col-md-2 align-items-center justify-content-center justify-content-sm-start d-grid mt-2 mt-sm-0">
+        <div className="user-user col-12 col-sm-2 col-md-2 align-items-center justify-content-center justify-content-sm-start d-grid mt-2 mt-sm-0">
           <div className="align-items-center justify-content-center d-grid">
             <h6 className="m-0 text-center text-sm-start">Usuário</h6>
             <p className="m-0">Davi Leocadio</p>
           </div>
         </div>
 
-        <div className="col-12 col-sm-1 col-md-1 more-virgem align-items-center justify-content-center d-flex mt-2 mt-sm-0">
+        <div className="col-12 col-sm-1 col-md-1 more-user align-items-center justify-content-center d-flex mt-2 mt-sm-0">
           <i className="bi bi-plus fs-1"></i>
         </div>
       </div>
@@ -96,9 +96,9 @@ export default function Carrosel({ chamados = [] }) {
       {/* Modal */}
       <div
         className="modal fade"
-        id="exampleModal"
+        id="exampleModal1"
         tabIndex={-1}
-        aria-labelledby="exampleModalLabel"
+        aria-labelledby="exampleModalLabel1"
         aria-hidden="true"
       >
         <div className="modal-dialog modal-dialog-centered">
@@ -107,7 +107,7 @@ export default function Carrosel({ chamados = [] }) {
             <div className="modal-header gap-4">
               {page === 1 ? (
                 <>
-                  <button onClick={page1} className="btn-ficha-virgem-ativado">
+                  <button onClick={page1} className="btn-ficha-user-ativado">
                     <h1 className="modal-title fs-5" >
                       Ficha Técnica
                     </h1>
@@ -120,12 +120,12 @@ export default function Carrosel({ chamados = [] }) {
               ) : (
                 <>
                   <button onClick={page1}>
-                    <h1 className="modal-title fs-5" id="exampleModalLabel">
+                    <h1 className="modal-title fs-5" id="exampleModalLabel1">
                       Ficha Técnica
                     </h1>
                   </button>
 
-                  <button onClick={page2} className="btn-chat-virgem-ativado">
+                  <button onClick={page2} className="btn-chat-user-ativado">
                     <h1 className="modal-title fs-5">Chat</h1>
                   </button>
                 </>
@@ -141,20 +141,20 @@ export default function Carrosel({ chamados = [] }) {
 
             {page === 1 ? (
               <div className="modal-body gap-5 p-4">
-                <div className="d-grid infos-ficha-virgem gap-3">
+                <div className="d-grid infos-ficha-user gap-3">
                   <p><b>Título: </b> oiii asdgas shadgahjs shdgkaaaaaaa AJ</p>
 
 
-                  <div className="d-md-flex d-grid info-ficha-virgem gap-4">
+                  <div className="d-md-flex d-grid info-ficha-user gap-4">
                     <p><b>Criação: </b> 20/12/2025</p>
                     <p><b>Prioridade: </b> Intervenção Imediata </p>
                   </div>
-                  <div className="d-md-flex d-grid info-ficha-virgem gap-4">
+                  <div className="d-md-flex d-grid info-ficha-user gap-4">
                     <p><b>Status: </b> Em Andamento</p>
                     <p><b>Tipo: </b> Software</p>
 
                   </div>
-                  <div className="d-md-flex d-grid info-ficha-virgem gap-4">
+                  <div className="d-md-flex d-grid info-ficha-user gap-4">
 
                     <p><b>Técnico: </b> Sem Técnico</p>
                     <p><b>Patrimônio: </b> 1213221</p>
@@ -163,19 +163,16 @@ export default function Carrosel({ chamados = [] }) {
 
                   <p><b>Descrição: </b> oiii asdgas shadgahjs sashdgashd shAGDHASJGD ashdgashdghdgkAJ aaaa</p>
                 </div>
-                <div className="mt-4" onClick={()=>atribuirTecnico(1)}>
-                   <BtnPegarChamado />
-                </div>
-               
+             
               </div>
             ) : (
               <div className="modal-body">
                 <div className="d-flex aling-items-center gap-3">
                   <i className="bi bi-person-circle text-center fs-5"></i>
-                  <h4>Sem técnico</h4>
+                  <h4>Fábio Henrique</h4>
                 </div>
 
-                <Chat possuiTecnico={false} />
+                <Chat possuiTecnico={true} />
               </div>
             )}
           </div>
